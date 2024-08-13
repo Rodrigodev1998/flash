@@ -1,4 +1,4 @@
-package com.company.flash.domain;
+package com.company.flash.domain.receiver;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;

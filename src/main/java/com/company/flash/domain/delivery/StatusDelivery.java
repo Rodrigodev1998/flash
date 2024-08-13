@@ -1,4 +1,4 @@
-package com.company.flash.domain;
+package com.company.flash.domain.delivery;
 
 public enum StatusDelivery {
 

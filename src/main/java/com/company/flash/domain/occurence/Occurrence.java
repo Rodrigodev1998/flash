@@ -1,5 +1,6 @@
-package com.company.flash.domain;
+package com.company.flash.domain.occurence;
 
+import com.company.flash.domain.delivery.Delivery;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;

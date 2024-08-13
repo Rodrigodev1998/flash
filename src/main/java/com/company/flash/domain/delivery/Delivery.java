@@ -1,5 +1,7 @@
-package com.company.flash.domain;
+package com.company.flash.domain.delivery;
 
+import com.company.flash.domain.receiver.Receiver;
+import com.company.flash.domain.profile.Profile;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
