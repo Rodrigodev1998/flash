@@ -39,15 +39,12 @@ public class Profile implements UserDetails {
         switch (this.role) {
             case ADMIN:
                 authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-                authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
                 break;
             case DELIVERY_PERSON:
                 authorities.add(new SimpleGrantedAuthority("ROLE_DELIVERY_PERSON"));
-                authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
                 break;
             case SHOP:
                 authorities.add(new SimpleGrantedAuthority("ROLE_SHOP"));
-                authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
                 break;
             default:
                 authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
