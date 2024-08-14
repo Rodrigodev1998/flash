@@ -58,16 +58,4 @@ public class AutheticationController {
 
         return ResponseEntity.ok().build();
     }
-
-    @GetMapping("/profile-all")
-    public List<ProfileResponseDTO> getAll(){
-        List<Profile> profileList = repository.findAll();
-        return profileList.stream()
-                .map(profile -> new ProfileResponseDTO(
-                        profile.getId(),
-                        profile.getUsername(),
-                        profile.getRole()
-                ))
-                .collect(Collectors.toList());
-    }
 }

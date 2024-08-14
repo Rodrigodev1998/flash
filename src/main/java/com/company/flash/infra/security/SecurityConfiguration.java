@@ -34,7 +34,10 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "v1/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "v1/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.GET, "v1/profile-all").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "v1/profile/profile-all").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "v1/profile/admin/{id}/details").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "v1/profile/delivery/{id}/details").hasRole("DELIVERY_PERSON")
+                        .requestMatchers(HttpMethod.PUT, "v1/profile/shop/{id}/details").hasRole("SHOP")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(exceptionHandling -> exceptionHandling
