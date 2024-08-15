@@ -34,7 +34,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "v1/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "v1/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.PUT,"v1/auth/update").permitAll()
+                        .requestMatchers(HttpMethod.PUT,"v1/auth/update").hasRole("ADMIN") //qualquer coisa, trocar
                         .requestMatchers(HttpMethod.GET, "v1/profile/profile-all").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "v1/profile/admin/{id}/details").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "v1/profile/delivery/{id}/details").hasRole("DELIVERY_PERSON")

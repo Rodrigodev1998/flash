@@ -4,5 +4,5 @@ import com.company.flash.domain.profile.TypeProfile;
 
 public record RegisterDTO(String username,
                           String password,
-                          TypeProfile role) {
+                          TypeProfile role, String phone) {
 }

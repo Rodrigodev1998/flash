@@ -23,13 +23,15 @@ public class Profile implements UserDetails {
     private String username;
     private String password;
     private TypeProfile role;
+    private String phone;
 
     public Profile(String username,
-                   String password, TypeProfile role){
+                   String password, TypeProfile role, String phone){
 
         this.username = username;
         this.password = password;
         this.role = role;
+        this.phone = phone;
     }
 
     @Override
